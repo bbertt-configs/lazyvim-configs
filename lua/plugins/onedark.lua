@@ -32,7 +32,24 @@ return {
 
       -- Custom Highlights --
       colors = {}, -- Override default colors
-      highlights = {}, -- Override highlight groups
+      highlights = {
+        -- 1. The main area with text
+        Normal = { bg = "#000000" },
+        -- 2. The area *below* the last line of the file (The ~ characters)
+        EndOfBuffer = { bg = "#000000" },
+        -- 3. The column on the left (Line numbers)
+        LineNr = { bg = "#000000" },
+        -- 4. The column for git signs and diagnostics
+        SignColumn = { bg = "#000000" },
+
+        -- Floating Windows (Deep Charcoal to make them "pop")
+        -- Try #161616 or #1e1e1e
+        NormalFloat = { bg = "#000000" },
+
+        -- The Border of the floating window
+        -- Making this a bright color like the One Dark "Blue" makes it pop even more
+        FloatBorder = { fg = "#61afef", bg = "#000000" },
+      }, -- Override highlight groups
 
       -- Plugins Config --
       diagnostics = {

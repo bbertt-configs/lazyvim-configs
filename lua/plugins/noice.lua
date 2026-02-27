@@ -27,17 +27,4 @@ return {
       opts.diagnostics.float.border = "rounded"
     end,
   },
-
-  -- 3. Configure Suggestions/Completion (nvim-cmp borders)
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      local cmp = require("cmp")
-      opts.window = opts.window or {}
-
-      -- Add borders to the completion menu and documentation
-      opts.window.completion = cmp.config.window.bordered()
-      opts.window.documentation = cmp.config.window.bordered()
-    end,
-  },
 }
